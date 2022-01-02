@@ -3300,14 +3300,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function Button(_ref) {
   var _ref$type = _ref.type,
-      type = _ref$type === void 0 ? 'submit' : _ref$type,
+      type = _ref$type === void 0 ? "submit" : _ref$type,
       _ref$className = _ref.className,
-      className = _ref$className === void 0 ? '' : _ref$className,
+      className = _ref$className === void 0 ? "" : _ref$className,
       processing = _ref.processing,
       children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
     type: type,
-    className: "inline-flex items-center px-4 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest active:bg-gray-900 transition ease-in-out duration-150 ".concat(processing && 'opacity-25', " ") + className,
+    className: "inline-flex items-center px-4 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest active:bg-gray-900 transition ease-in-out duration-150 ".concat(processing && "opacity-25", " ") + className,
     disabled: processing,
     children: children
   });
@@ -4118,9 +4118,9 @@ function Login(_ref) {
       canResetPassword = _ref.canResetPassword;
 
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_7__.useForm)({
-    email: '',
-    password: '',
-    remember: ''
+    email: "",
+    password: "",
+    remember: ""
   }),
       data = _useForm.data,
       setData = _useForm.setData,
@@ -4131,22 +4131,22 @@ function Login(_ref) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     return function () {
-      reset('password');
+      reset("password");
     };
   }, []);
 
   var onHandleChange = function onHandleChange(event) {
-    setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+    setData(event.target.name, event.target.type === "checkbox" ? event.target.checked : event.target.value);
   };
 
   var submit = function submit(e) {
     e.preventDefault();
-    post(route('login'));
+    post(route("login"));
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_3__["default"], {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_7__.Head, {
-      title: "Log in"
+      title: "\u0627\u0644\u062F\u062E\u0648\u0644"
     }), status && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "mb-4 font-medium text-sm text-green-600",
       children: status
@@ -4157,7 +4157,7 @@ function Login(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
           forInput: "email",
-          value: "Email"
+          value: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0627\u0644\u0643\u062A\u0631\u0648\u0646\u064A"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
           type: "text",
           name: "email",
@@ -4171,7 +4171,7 @@ function Login(_ref) {
         className: "mt-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
           forInput: "password",
-          value: "Password"
+          value: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
           type: "password",
           name: "password",
@@ -4183,27 +4183,23 @@ function Login(_ref) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
         className: "block mt-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("label", {
-          className: "flex items-center",
+          className: "flex items-center ",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Checkbox__WEBPACK_IMPORTED_MODULE_2__["default"], {
             name: "remember",
             value: data.remember,
             handleChange: onHandleChange
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-            className: "ml-2 text-sm text-gray-600",
-            children: "Remember me"
+            className: "mr-2 text-sm font-tajawal-light font-bold text-gray-600",
+            children: "\u062A\u0630\u0643\u0631\u0646\u064A"
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "flex items-center justify-end mt-4",
-        children: [canResetPassword && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_7__.Link, {
-          href: route('password.request'),
-          className: "underline text-sm text-gray-600 hover:text-gray-900",
-          children: "Forgot your password?"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "flex items-center justify-center mt-4",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
           className: "ml-4",
           processing: processing,
-          children: "Log in"
-        })]
+          children: "\u062F\u062E\u0648\u0644"
+        })
       })]
     })]
   });
@@ -4241,10 +4237,10 @@ __webpack_require__.r(__webpack_exports__);
 
 function Register() {
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__.useForm)({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: ''
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: ""
   }),
       data = _useForm.data,
       setData = _useForm.setData,
@@ -4255,22 +4251,22 @@ function Register() {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     return function () {
-      reset('password', 'password_confirmation');
+      reset("password", "password_confirmation");
     };
   }, []);
 
   var onHandleChange = function onHandleChange(event) {
-    setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+    setData(event.target.name, event.target.type === "checkbox" ? event.target.checked : event.target.value);
   };
 
   var submit = function submit(e) {
     e.preventDefault();
-    post(route('register'));
+    post(route("register"));
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_2__["default"], {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__.Head, {
-      title: "Register"
+      title: "\u0625\u0636\u0627\u0641\u0629 \u0645\u0633\u062A\u062E\u062F\u0645"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_5__["default"], {
       errors: errors
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
@@ -4278,7 +4274,7 @@ function Register() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_4__["default"], {
           forInput: "name",
-          value: "Name"
+          value: "\u0627\u0644\u0627\u0633\u0645"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "text",
           name: "name",
@@ -4293,7 +4289,7 @@ function Register() {
         className: "mt-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_4__["default"], {
           forInput: "email",
-          value: "Email"
+          value: "\u0627\u0644\u0627\u064A\u0645\u064A\u0644"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "email",
           name: "email",
@@ -4307,7 +4303,7 @@ function Register() {
         className: "mt-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_4__["default"], {
           forInput: "password",
-          value: "Password"
+          value: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0633\u0631"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "password",
           name: "password",
@@ -4321,7 +4317,7 @@ function Register() {
         className: "mt-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_4__["default"], {
           forInput: "password_confirmation",
-          value: "Confirm Password"
+          value: "\u0625\u0639\u0627\u062F\u0629 \u0643\u0644\u0645\u0629 \u0627\u0644\u0633\u0631"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
           type: "password",
           name: "password_confirmation",
@@ -4330,17 +4326,13 @@ function Register() {
           handleChange: onHandleChange,
           required: true
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-        className: "flex items-center justify-end mt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__.Link, {
-          href: route('login'),
-          className: "underline text-sm text-gray-600 hover:text-gray-900",
-          children: "Already registered?"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        className: "flex items-center justify-center mt-4",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
           className: "ml-4",
           processing: processing,
-          children: "Register"
-        })]
+          children: "\u0625\u0636\u0627\u0641\u0629"
+        })
       })]
     })]
   });
