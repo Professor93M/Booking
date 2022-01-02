@@ -6,7 +6,7 @@ import DashboardBar from "@/Components/DashboardBar";
 export default function Dashboard(props) {
     return (
         <Authenticated auth={props.auth} errors={props.errors}>
-            <Head title="Dashboard" />
+            <Head title="لوحة التحكم" />
             <DashboardBar auth={props.auth} />
         </Authenticated>
     );

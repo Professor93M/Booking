@@ -29,7 +29,7 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <Link href="#">
+                            <Link href="/users">
                                 <span className="mr-2">المستخدمين</span>
                             </Link>
                         </li>
@@ -53,7 +53,7 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <Link href="#">
+                            <Link href="/dashboard/menu">
                                 <span className="mr-2">الوجبات</span>
                             </Link>
                         </li>
@@ -109,7 +109,7 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <Link href="#">
+                            <Link href="categories">
                                 <span className="mr-2">الاقسام</span>
                             </Link>
                         </li>
@@ -130,9 +130,9 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <a href="#">
+                            <Link href="/orders">
                                 <span className="mr-2">الطلبات</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
