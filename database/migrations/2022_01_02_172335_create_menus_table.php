@@ -18,7 +18,6 @@ class CreateMenusTable extends Migration
             $table->string('title');
             $table->string('price');
             $table->string('cost');
-            $table->string('category');
             $table->boolean('show')->default(true);
             $table->bigInteger('categories_id')->unsigned();
             $table->foreign('categories_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
