@@ -3481,10 +3481,10 @@ function DashboardBar(_ref) {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-              href: "categories",
+              href: "/dashboard/categories",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 className: "mr-2",
-                children: "\u0627\u0644\u0627\u0642\u0633\u0627\u0645"
+                children: "\u0627\u0644\u0641\u0626\u0627\u062A"
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
@@ -3604,29 +3604,29 @@ var Trigger = function Trigger(_ref2) {
 
 var Content = function Content(_ref3) {
   var _ref3$align = _ref3.align,
-      align = _ref3$align === void 0 ? 'right' : _ref3$align,
+      align = _ref3$align === void 0 ? "right" : _ref3$align,
       _ref3$width = _ref3.width,
-      width = _ref3$width === void 0 ? '48' : _ref3$width,
+      width = _ref3$width === void 0 ? "48" : _ref3$width,
       _ref3$contentClasses = _ref3.contentClasses,
-      contentClasses = _ref3$contentClasses === void 0 ? 'py-1 bg-white' : _ref3$contentClasses,
+      contentClasses = _ref3$contentClasses === void 0 ? "py-1 bg-white" : _ref3$contentClasses,
       children = _ref3.children;
 
   var _useContext2 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(DropDownContext),
       open = _useContext2.open,
       setOpen = _useContext2.setOpen;
 
-  var alignmentClasses = 'origin-top';
+  var alignmentClasses = "origin-top";
 
-  if (align === 'left') {
-    alignmentClasses = 'origin-top-left left-0';
-  } else if (align === 'right') {
-    alignmentClasses = 'origin-top-right right-0';
+  if (align === "left") {
+    alignmentClasses = "origin-top-left left-0";
+  } else if (align === "right") {
+    alignmentClasses = "origin-top-right right-0";
   }
 
-  var widthClasses = '';
+  var widthClasses = "";
 
-  if (width === '48') {
-    widthClasses = 'w-48';
+  if (width === "48") {
+    widthClasses = "w-48";
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
@@ -3655,15 +3655,15 @@ var Content = function Content(_ref3) {
 var DropdownLink = function DropdownLink(_ref4) {
   var href = _ref4.href,
       _ref4$method = _ref4.method,
-      method = _ref4$method === void 0 ? 'post' : _ref4$method,
+      method = _ref4$method === void 0 ? "post" : _ref4$method,
       _ref4$as = _ref4.as,
-      as = _ref4$as === void 0 ? 'a' : _ref4$as,
+      as = _ref4$as === void 0 ? "a" : _ref4$as,
       children = _ref4.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: href,
     method: method,
     as: as,
-    className: "block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
+    className: "block w-full px-4 py-2 text-right text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out",
     children: children
   });
 };
@@ -3779,7 +3779,7 @@ function NavLink(_ref) {
       children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: href,
-    className: active ? "inline-flex items-center px-1 py-1 border-b-2 border-red-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out" : "inline-flex items-center px-1 py-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out",
+    className: active ? "inline-flex items-center px-1 py-1 border-b-2 border-slate-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out" : "inline-flex items-center px-1 py-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out",
     children: children
   });
 }

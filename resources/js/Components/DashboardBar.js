@@ -109,8 +109,8 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <Link href="categories">
-                                <span className="mr-2">الاقسام</span>
+                            <Link href="/dashboard/categories">
+                                <span className="mr-2">الفئات</span>
                             </Link>
                         </li>
                         <li className="mb-2 px-4 py-4 text-gray-100 flex flex-row  border-gray-300 hover:text-slate-700   hover:bg-gray-300  hover:font-bold rounded-lg">
