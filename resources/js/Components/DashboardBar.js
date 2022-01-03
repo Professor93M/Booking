@@ -3,6 +3,7 @@ import { Link } from "@inertiajs/inertia-react";
 
 export default function DashboardBar({ auth }) {
     const { user } = auth;
+
     return (
         <div>
             <nav className="flex flex-col  w-64 h-screen px-4 tex-gray-900 border bg-slate-400">
@@ -29,7 +30,7 @@ export default function DashboardBar({ auth }) {
                                     />
                                 </svg>
                             </span>
-                            <Link href="/users">
+                            <Link href="#">
                                 <span className="mr-2">المستخدمين</span>
                             </Link>
                         </li>
