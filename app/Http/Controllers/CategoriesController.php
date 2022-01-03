@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
+use App\Models\Images;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -38,6 +39,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
+        // Validating data from Form
         $request->validate([
             'title' => 'required|unique:categories,title'
         ],[
@@ -45,7 +47,18 @@ class CategoriesController extends Controller
             'title.unique' => 'اسم الفئة المدخلة مستخدم بالفعل',
         ]);
 
-        $request->save(['title']);
+        // saveing data from Form
+        $categories = Categories::create([
+            'title' => $request->title,
+        ]);
+
+        // check Image if exists and uploading then save
+        if($request->file('img_url')){
+            $img_url = $request->file('img_url')->store('Categories', 'public');
+            $categories->image()->save(
+                Images::make(['img_url' => $img_url])
+            );
+        }
     }
 
     /**
@@ -79,9 +92,16 @@ class CategoriesController extends Controller
      * @param  \App\Models\Categories  $categories
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, $categories)
     {
-        //
+        // Validating data from Form
+        $request->validate([
+            'title' => 'required|unique:categories,title'
+        ],[
+            'title.required' => 'يجب ادخال عنوان الفئة',
+            'title.unique' => 'اسم الفئة المدخلة مستخدم بالفعل',
+        ]);
+
     }
 
     /**
