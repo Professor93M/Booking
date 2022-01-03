@@ -4702,10 +4702,10 @@ function VerifyEmail(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Categories/Add.js":
-/*!**********************************************!*\
-  !*** ./resources/js/Pages/Categories/Add.js ***!
-  \**********************************************/
+/***/ "./resources/js/Pages/Categories/Add.jsx":
+/*!***********************************************!*\
+  !*** ./resources/js/Pages/Categories/Add.jsx ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4756,7 +4756,7 @@ function index(_ref) {
 
   var submit = function submit(e) {
     e.preventDefault();
-    post(route("dashboard/catagories/add"));
+    post("/dashboard/categories");
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
@@ -4772,57 +4772,46 @@ function index(_ref) {
         }), status && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
           className: "mb-4 font-medium text-sm text-green-600",
           children: status
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          errors: errors
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
-          onSubmit: submit,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              forInput: "email",
-              value: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0627\u0644\u0643\u062A\u0631\u0648\u0646\u064A"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
-              type: "text",
-              name: "email",
-              value: data.email,
-              className: "mt-1 block w-full",
-              autoComplete: "username",
-              isFocused: true,
-              handleChange: onHandleChange
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "mt-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              forInput: "password",
-              value: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
-              type: "password",
-              name: "password",
-              value: data.password,
-              className: "mt-1 block w-full",
-              autoComplete: "current-password",
-              handleChange: onHandleChange
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: "block mt-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("label", {
-              className: "flex items-center ",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                name: "remember",
-                value: data.remember,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "mx-auto",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
+            onSubmit: submit,
+            encType: "multipart/form-data",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                forInput: "category",
+                value: "\u0627\u0633\u0645 \u0627\u0644\u0641\u0626\u0629"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                type: "text",
+                name: "category",
+                value: data.category,
+                className: "mt-1 block w-full",
+                autoComplete: "username",
+                isFocused: true,
                 handleChange: onHandleChange
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                className: "mr-2 text-sm font-tajawal-light font-bold text-gray-600",
-                children: "\u062A\u0630\u0643\u0631\u0646\u064A"
               })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: "flex items-center justify-center mt-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              className: "ml-4",
-              processing: processing,
-              children: "\u062F\u062E\u0648\u0644"
-            })
-          })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+              className: "mt-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                forInput: "img_url",
+                value: "\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                type: "file",
+                name: "img_url",
+                value: data.img_url,
+                className: "mt-1 block w-full",
+                autoComplete: "current-password",
+                handleChange: onHandleChange
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+              className: "flex items-center justify-center mt-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                className: "ml-4",
+                processing: processing,
+                children: "\u0625\u0636\u0627\u0641\u0629"
+              })
+            })]
+          })
         })]
       })]
     })
@@ -4831,10 +4820,10 @@ function index(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Categories/Edit.js":
-/*!***********************************************!*\
-  !*** ./resources/js/Pages/Categories/Edit.js ***!
-  \***********************************************/
+/***/ "./resources/js/Pages/Categories/Edit.jsx":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/Categories/Edit.jsx ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4962,10 +4951,10 @@ function index(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Categories/Index.js":
-/*!************************************************!*\
-  !*** ./resources/js/Pages/Categories/Index.js ***!
-  \************************************************/
+/***/ "./resources/js/Pages/Categories/Index.jsx":
+/*!*************************************************!*\
+  !*** ./resources/js/Pages/Categories/Index.jsx ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -58671,12 +58660,12 @@ var map = {
 	"./Auth/ResetPassword.js": "./resources/js/Pages/Auth/ResetPassword.js",
 	"./Auth/VerifyEmail": "./resources/js/Pages/Auth/VerifyEmail.js",
 	"./Auth/VerifyEmail.js": "./resources/js/Pages/Auth/VerifyEmail.js",
-	"./Categories/Add": "./resources/js/Pages/Categories/Add.js",
-	"./Categories/Add.js": "./resources/js/Pages/Categories/Add.js",
-	"./Categories/Edit": "./resources/js/Pages/Categories/Edit.js",
-	"./Categories/Edit.js": "./resources/js/Pages/Categories/Edit.js",
-	"./Categories/Index": "./resources/js/Pages/Categories/Index.js",
-	"./Categories/Index.js": "./resources/js/Pages/Categories/Index.js",
+	"./Categories/Add": "./resources/js/Pages/Categories/Add.jsx",
+	"./Categories/Add.jsx": "./resources/js/Pages/Categories/Add.jsx",
+	"./Categories/Edit": "./resources/js/Pages/Categories/Edit.jsx",
+	"./Categories/Edit.jsx": "./resources/js/Pages/Categories/Edit.jsx",
+	"./Categories/Index": "./resources/js/Pages/Categories/Index.jsx",
+	"./Categories/Index.jsx": "./resources/js/Pages/Categories/Index.jsx",
 	"./Dashboard": "./resources/js/Pages/Dashboard.js",
 	"./Dashboard.js": "./resources/js/Pages/Dashboard.js",
 	"./Menu/Index": "./resources/js/Pages/Menu/Index.js",
