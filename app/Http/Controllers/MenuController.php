@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class MenuController extends Controller
 {
@@ -14,7 +15,9 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('Menu/Index', [
+            'menu' => Menu::with('image')->paginate(10),
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Menu/Add');
     }
 
     /**
@@ -55,9 +58,11 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit($menu)
     {
-        //
+        return Inertia::render('Menu/Edit', [
+            'menu' => Menu::findOrFail($menu)->with('image')->first()
+        ]);
     }
 
     /**

@@ -24,5 +24,11 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
 
+Route::prefix('dashboard')->middleware('admin')->group(function () {
+    Route::get('/user', [Controller::class, 'index'])->name('index');
+    Route::get('/user/{id}/edit', [Controller::class, 'edit'])->name('edit');
+    Route::get('/user/create', [Controller::class, 'create'])->name('create');
+});
+
 Route::resource('dashboard/menu', MenuController::class)->middleware('admin');
 Route::resource('dashboard/categories', CategoriesController::class)->middleware('admin');

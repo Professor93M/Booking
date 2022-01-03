@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CategoriesController extends Controller
 {
@@ -14,7 +15,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        return Categories::paginate(10);
+        return Inertia::render('Categories/Index' , [
+            'categories' => Categories::with('image')->paginate(10),
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Categories/Add');
     }
 
     /**
@@ -35,7 +38,14 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|unique:categories,title'
+        ],[
+            'title.required' => 'يجب ادخال عنوان الفئة',
+            'title.unique' => 'اسم الفئة المدخلة مستخدم بالفعل',
+        ]);
+
+        $request->save(['title']);
     }
 
     /**
@@ -55,9 +65,11 @@ class CategoriesController extends Controller
      * @param  \App\Models\Categories  $categories
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categories $categories)
+    public function edit($categories)
     {
-        //
+        return Inertia::render('Categories/Edit', [
+            'categories' => Categories::findOrFail($categories)->with('image')->first()
+        ]);
     }
 
     /**
